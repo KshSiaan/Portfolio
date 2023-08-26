@@ -1,0 +1,169 @@
+@use 'resource' as r
+
+
+    
+// $base-color: #191919
+// $dark-gray: #121212
+// $medium-gray: #2c2c2c
+// $light-gray: #474747
+// $gold: #FFC107
+// $light-gold: #FFCA28
+// $deep-gold: #E1B12C
+
+// $abel: 'Abel', sans-serif
+// $blacksans: 'Black Han Sans', sans-serif
+// $bubblegum: 'Bubblegum Sans', cursive
+// $lato:'Lato', sans-serif
+
+    
+body
+    height: 100vh
+    width: 100vw
+
+main
+    height: 100%
+    width: 100%
+    @include r.flexer(row,space-between)
+
+    .lhs,.rhs
+        height: 100%
+        width: 50%
+    .lhs
+        @include r.flexer(column,center)
+        .img
+            height:80%
+            width:80%
+            background: url('/assets/abPic.png')
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+            border-radius: 50%
+
+    .rhs
+        .topr
+            height: 30%
+            width: 100%
+            @include r.flexer(column, flex-end)
+            font-family: r.$bubblegum
+            color: r.$gold
+
+            h1
+                font-size: 40px
+                margin: 0
+                padding: 0
+            p
+                font-size: 25px
+        .accordion-container
+            width:100%
+            .accordion-header
+                background-color: r.$dark-gray
+                cursor: pointer
+                padding: 20px 30px
+                border: none
+                outline: none
+                font-size: 20px
+                font-family: r.$lato
+                transition: background-color 0.3s ease-in-out
+
+                &:hover
+                    background-color: r.$medium-gray
+
+            .accordion-content
+                background-color: inherit
+                border: none
+                outline: none
+                overflow: hidden
+                max-height: 0
+                transition: max-height 0.3s ease-in-out
+
+                .conts
+                    width: 96%
+                    height: 50px
+                    padding: 0 2%
+                    font-size: 18px
+                    font-family: r.$lato
+                    @include r.flexer(row, space-between)
+                    .ongoing,.cpl,.ns
+                        color: r.$light-gray
+                        
+                        
+
+    @keyframes rotate 
+    from 
+        transform: rotate(0deg)
+    to 
+        transform: rotate(360deg)
+
+
+@media screen and (max-width: 750px)
+
+    main
+        height: 100%
+        width: 100%
+        @include r.flexer(column,space-between)
+
+        .lhs,.rhs
+            width: 100%
+
+        .lhs
+            height: 30%
+            @include r.flexer(column,center)
+            .img
+                height:80%
+                width:80%
+                background: url('/assets/abPic.png')
+                background-position: center
+                background-repeat: no-repeat
+                background-size: contain
+                border-radius: 50%
+
+        .rhs
+            height: 70%
+            .topr
+                height: 30%
+                width: 100%
+                @include r.flexer(column, flex-end)
+                font-family: r.$bubblegum
+                color: r.$gold
+
+                h1
+                    font-size: 40px
+                    margin: 0
+                    padding: 0
+                p
+                    font-size: 20px
+                    text-align: center
+            .accordion-container
+                width:100%
+                .accordion-header
+                    background-color: r.$dark-gray
+                    cursor: pointer
+                    padding: 20px 30px
+                    border: none
+                    outline: none
+                    font-size: 20px
+                    font-family: r.$lato
+                    transition: background-color 0.3s ease-in-out
+
+                    &:hover
+                        background-color: r.$medium-gray
+
+                .accordion-content
+                    background-color: inherit
+                    border: none
+                    outline: none
+                    overflow: hidden
+                    max-height: 0
+                    transition: max-height 0.3s ease-in-out
+
+                    .conts
+                        width: 96%
+                        height: 50px
+                        padding: 0 2%
+                        font-size: 18px
+                        font-family: r.$lato
+                        @include r.flexer(row, space-between)
+                        .ongoing,.cpl,.ns
+                            color: r.$light-gray
+                            
+                            

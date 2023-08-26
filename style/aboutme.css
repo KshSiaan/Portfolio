@@ -1,0 +1,187 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Black+Han+Sans&family=Bubblegum+Sans&family=Lato:wght@700&display=swap");
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  @keyframes rotate;
+}
+main .lhs, main .rhs {
+  height: 100%;
+  width: 50%;
+}
+main .lhs {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .lhs .img {
+  height: 80%;
+  width: 80%;
+  background: url("/assets/abPic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+}
+main .rhs .topr {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Bubblegum Sans", cursive;
+  color: #FFC107;
+}
+main .rhs .topr h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+main .rhs .topr p {
+  font-size: 25px;
+}
+main .rhs .accordion-container {
+  width: 100%;
+}
+main .rhs .accordion-container .accordion-header {
+  background-color: #121212;
+  cursor: pointer;
+  padding: 20px 30px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  transition: background-color 0.3s ease-in-out;
+}
+main .rhs .accordion-container .accordion-header:hover {
+  background-color: #2c2c2c;
+}
+main .rhs .accordion-container .accordion-content {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+main .rhs .accordion-container .accordion-content .conts {
+  width: 96%;
+  height: 50px;
+  padding: 0 2%;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .rhs .accordion-container .accordion-content .conts .ongoing, main .rhs .accordion-container .accordion-content .conts .cpl, main .rhs .accordion-container .accordion-content .conts .ns {
+  color: #474747;
+}
+main from {
+  transform: rotate(0deg);
+}
+main to {
+  transform: rotate(360deg);
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .lhs, main .rhs {
+    width: 100%;
+  }
+  main .lhs {
+    height: 30%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  main .lhs .img {
+    height: 80%;
+    width: 80%;
+    background: url("/assets/abPic.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+  }
+  main .rhs {
+    height: 70%;
+  }
+  main .rhs .topr {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Bubblegum Sans", cursive;
+    color: #FFC107;
+  }
+  main .rhs .topr h1 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  main .rhs .topr p {
+    font-size: 20px;
+    text-align: center;
+  }
+  main .rhs .accordion-container {
+    width: 100%;
+  }
+  main .rhs .accordion-container .accordion-header {
+    background-color: #121212;
+    cursor: pointer;
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    transition: background-color 0.3s ease-in-out;
+  }
+  main .rhs .accordion-container .accordion-header:hover {
+    background-color: #2c2c2c;
+  }
+  main .rhs .accordion-container .accordion-content {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+  }
+  main .rhs .accordion-container .accordion-content .conts {
+    width: 96%;
+    height: 50px;
+    padding: 0 2%;
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .rhs .accordion-container .accordion-content .conts .ongoing, main .rhs .accordion-container .accordion-content .conts .cpl, main .rhs .accordion-container .accordion-content .conts .ns {
+    color: #474747;
+  }
+}/*# sourceMappingURL=aboutme.css.map */

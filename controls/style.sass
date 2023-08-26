@@ -1,0 +1,227 @@
+@use 'resource' as r
+    
+// acctual codes
+
+*
+    outline: none
+    border: none
+
+body
+    background-color: r.$base-color
+    color: r.$gold
+    position: relative
+    -ms-overflow-style: none
+    scrollbar-width: none
+    overflow-x: hidden
+    &::-webkit-scrollbar 
+        display: none
+.navbar
+    position: absolute
+    height: 85px
+    width: 100vw
+    top: 0
+    left: 0
+    @include r.flexer(row, space-around)
+    z-index: 5
+.menu
+    display: none
+
+.lsn
+    height: 100%
+    width: calc(100% / 3)
+    
+    
+
+.logo
+    height: 85px
+    width: 85px
+    background-image: url("/assets/logo.png")
+    background-position: center
+    background-size: cover
+    filter: drop-shadow(1px 1px 3px r.$medium-gray)
+    margin-left: 40px
+    position: relative
+    z-index: 2
+    &:hover
+        &::before
+            content: ''
+            position: absolute
+            height: 10px
+            width: 10px
+            background-color: red
+            top: 34px
+            right: 23px
+            z-index: 1
+            filter: blur(5px)
+        &::after
+            content: ''
+            position: absolute
+            height: 10px
+            width: 10px
+            background-color: red
+            top: 34px
+            left: 23px
+            z-index: 1
+            filter: blur(5px)
+.menu-container
+    display: none
+
+.msn
+    height: 100%
+    width: calc(100% / 3)
+    @include r.flexer(row, space-around)
+    
+    button
+        height: 100%
+        width: (100% / 3)
+        text-align: center
+        background: inherit
+        color: r.$gold
+        font-family: r.$abel
+        font-size: 1.5em
+        cursor: pointer
+        transition: background-color .5s, box-shadow .5s
+
+        &:hover
+            background-color: r.$dark-gray
+            box-shadow: 2px 2px 5px #000
+            font-size: 1.7em
+            
+
+.rsn
+    height: 100%
+    width: (100% / 3)
+    @include r.flexer(row, center )
+    
+    button
+        height: 50px
+        font-size: 1.2em
+        color: r.$medium-gray
+        font-family: r.$bubblegum
+        cursor: pointer
+        padding: 10px 30px
+        background-color: r.$deep-gold
+        border-radius: 50px
+        transition: all .5s
+
+        &:hover
+            background-color: r.$light-gold
+            transform: translateY(-1px)
+            box-shadow: 0px 4px 6px #00000025
+
+.menuplace
+    position: absolute
+    height: 100vh
+    width: 100vw
+    z-index: 2  
+    /* From https://css.glass */
+    background: rgba(25, 25, 25, 0.852)
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+    backdrop-filter: blur(10px)
+    -webkit-backdrop-filter: blur(10px)
+    top: 0
+    left: -100%
+    transition: all .4s
+
+    .menuheader
+        width: 100%
+        height: 25%
+        z-index: 3
+        @include r.flexer(column,flex-end )
+        
+        .logoB
+            z-index: 4
+            height: 100px
+            width: 100px
+            display: block
+            background-image: url("/assets/logo.png")
+            background-position: center
+            background-size: cover
+            position: relative
+
+    .menubody
+        width: 100%
+        height: 75%
+        z-index: 3
+        @include r.flexer(column, space-evenly)
+
+        button
+            background: inherit
+            width: 100%
+            text-align: center
+            color: r.$deep-gold
+            font-family: r.$abel
+            font-size: 1.7em
+            padding: 40px 0
+            transition: all .1s
+            
+            &:active
+                background: r.$dark-gray
+    
+
+
+@media screen and (max-width: 750px)
+    .navbar
+        @include r.flexer(row, space-between)
+        width: 100%
+        
+    .logo
+        display: none
+    
+    .lsn
+        width: 20%
+        @include r.flexer(row, center)
+    .msn
+        width: 45%
+        @include r.flexer(row, flex-start)
+        display: none
+    .rsn
+        width: 35%
+        @include r.flexer(row, flex-start)
+
+
+    .menu-btn 
+        background: transparent 
+        border: none 
+        cursor: pointer 
+        height: 50px 
+        position: relative 
+        width: 50px 
+        @include r.flexer(column,center)
+        
+        &.close 
+            .menu-btn__burger 
+                background: transparent 
+                &:before 
+                    transform: rotate(45deg) 
+                    top: 0 
+                &:after 
+                    transform: rotate(-45deg) 
+                    top: 0 
+    .menu-btn__burger 
+        background: #333 
+        border-radius: 4px 
+        display: block 
+        height: 4px 
+        position: absolute 
+        transition: all 0.3s ease-in-out 
+        width: 25px 
+        background-color: r.$gold
+        &:before 
+            top: -10px 
+        &:after 
+            top: 10px 
+    .menu-btn__burger:before,
+    .menu-btn__burger:after 
+        background-color: r.$deep-gold
+        border-radius: 4px 
+        content: "" 
+        display: block 
+        height: 4px 
+        position: absolute 
+        transition: all 0.3s ease-in-out 
+        width: 25px 
+
+
+
+

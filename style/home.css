@@ -1,0 +1,230 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Black+Han+Sans&family=Bubblegum+Sans&family=Lato:wght@700&display=swap");
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #191919 0%, #2c2c2c 57%);
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lhs {
+  height: 100%;
+  width: 50%;
+  background-color: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.lhs .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/assets/RavenSkull.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+}
+
+.rhs {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rhs .topRight {
+  font-family: "Abel", sans-serif;
+  margin-top: 100px;
+}
+.rhs .topRight h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+}
+.rhs .topRight h2 {
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+}
+.rhs .bottomRight {
+  font-family: "Abel", sans-serif;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+}
+.rhs .bottomRight h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+.rhs .bottomRight .brButts {
+  font-family: "Bubblegum Sans", cursive;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.rhs .bottomRight .brButts button {
+  background: inherit;
+  font-size: 30px;
+  padding: 20px 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.rhs .bottomRight .brButts .disButt {
+  border: solid 2px #E1B12C;
+  border-radius: 5px;
+  color: #FFC107;
+  transition: font-size 0.3s;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .lhs {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .lhs .img {
+    width: 350px;
+    height: 350px;
+    background-image: url("/assets/RavenSkull.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+  }
+  .rhs {
+    margin-top: -100px;
+    height: 50%;
+    width: 100%;
+  }
+  .rhs .topRight {
+    font-family: "Abel", sans-serif;
+    margin-top: 50px;
+  }
+  .rhs .topRight h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  .rhs .topRight h2 {
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  .rhs .bottomRight {
+    font-family: "Abel", sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+  }
+  .rhs .bottomRight h1 {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  .rhs .bottomRight .brButts {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+  .rhs .bottomRight .brButts button {
+    font-size: 20px;
+  }
+  header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header .lhs {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header .lhs .img {
+    width: 350px;
+    height: 350px;
+    background-image: url("/assets/RavenSkull.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+  }
+  header .rhs {
+    margin-top: -100px;
+    height: 50%;
+    width: 100%;
+    display: block;
+  }
+  header .rhs .topRight {
+    font-family: "Abel", sans-serif;
+    margin-top: 50px;
+  }
+  header .rhs .topRight h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  header .rhs .topRight h2 {
+    font-size: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  header .rhs .bottomRight {
+    font-family: "Abel", sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+  }
+  header .rhs .bottomRight h1 {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  header .rhs .bottomRight .brButts {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+  header .rhs .bottomRight button {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=home.css.map */
